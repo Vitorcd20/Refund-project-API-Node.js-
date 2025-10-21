@@ -2,17 +2,20 @@
   "name": "refundapi",
   "version": "1.0.0",
   "description": "Refund Api",
-  "main": "index.js",
+  "main": "src/server.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "tsx watch src/server.ts"
   },
   "author": "Vitor Vieira",
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
-    "express": "^4.19.2"
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "express-async-errors": "^3.1.1"
   },
   "devDependencies": {
+    "@types/cors": "^2.8.17",
     "@types/express": "^5.0.0",
     "ts-node": "^10.9.2",
     "tsx": "^4.19.2",
