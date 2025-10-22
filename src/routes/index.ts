@@ -8,11 +8,11 @@ import { ensureAuthenticated } from "@/middlewares/ensure-autheticated";
 
 const routes = Router();
 
-//public routes
+// public routes
 routes.use("/users", usersRoutes);
 routes.use("/sessions", sessionsRoutes);
 
-//private routes
+// private routes
 routes.use(ensureAuthenticated)
 routes.use("/refunds", refundsRoutes)
 
