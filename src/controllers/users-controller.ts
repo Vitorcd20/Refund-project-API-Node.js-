@@ -18,8 +18,8 @@ class UsersController {
         .string()
         .min(6, { message: "password must have at least 6 characters" }),
       role: z
-        .enum([UserRole.employe, UserRole.manager])
-        .default(UserRole.employe),
+        .enum([UserRole.employee, UserRole.manager])
+        .default(UserRole.employee),
     });
 
     const { name, email, password, role } = bodySchema.parse(request.body);
